@@ -8,16 +8,17 @@ public class ConsultarCheque {
     private double solicitado = 0;
     private boolean verificador = true;
     private Saldo saldo = new Saldo();
+    private Deposito deposito = new Deposito();
 
 
-    public void definirLimite(Deposito valor){
+    public void definirLimite(double valor){
         
-        if (valor.getPrimeiroDeposito() == true) {
+        if (deposito.getPrimeiroDeposito() == true) {
 
-            if (valor.getDeposito() <= 500) {
+            if (valor <= 500) {
                 limite = 50;
             }else {
-                limite = valor.getDeposito()*0.5;
+                limite = valor*0.5;
             }
         }
     }

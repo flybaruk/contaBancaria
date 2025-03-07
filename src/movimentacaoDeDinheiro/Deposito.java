@@ -7,13 +7,13 @@ public class Deposito extends MovimentacaoDeDinheiro{
     private double deposito;
     private boolean primeiroDeposito = true;
     private Saldo saldo = new Saldo();
-    
+    private ConsultarCheque cheque = new ConsultarCheque();
 
     public double getDeposito() {
         return deposito;
     }
     public void setDeposito(double deposito) {
-        
+        cheque.definirLimite(deposito);
         setPrimeiroDeposito(false);
         this.deposito = deposito;
     }

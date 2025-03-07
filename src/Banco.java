@@ -15,7 +15,6 @@ public class Banco {
         System.out.println("Valor inicial: "+saldo.getSaldo());
         
         saldo.setSaldo(deposito.movimentacao(2000));
-        cheque.definirLimite(deposito);
         System.out.println("Primeiro deposito: "+ saldo.getSaldo());
         System.out.println(cheque.getLimite());
         saldo.setSaldo(saque.movimentacao(1000));
